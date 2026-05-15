@@ -3,14 +3,14 @@ import Image from "next/image";
 
 import { siteBranding } from "@/lib/siteBranding";
 
-const HERO_SRC = "/IMG_4127.JPEG";
+const HERO_SRC = "/raquel-violinista.JPEG";
 
 export function Hero() {
   return (
     <section className="relative isolate min-h-[50vh] w-full overflow-hidden md:min-h-[60vh] lg:mx-auto lg:max-w-6xl lg:rounded-2xl">
       <Image
         src={HERO_SRC}
-        alt="Raquel con el violín en exteriores, junto al agua"
+        alt="Raquel Reina Violinista con el violín en exteriores, junto al agua"
         fill
         className="object-cover"
         priority
