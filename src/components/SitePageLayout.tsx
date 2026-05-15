@@ -1,4 +1,3 @@
-import { HelpFab } from "@/components/HelpFab";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 
@@ -12,7 +11,6 @@ export function SitePageLayout({ children }: SitePageLayoutProps) {
       <SiteHeader />
       <main className="min-w-0 w-full flex-1">{children}</main>
       <SiteFooter />
-      <HelpFab />
     </div>
   );
 }

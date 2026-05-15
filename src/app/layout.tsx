@@ -20,8 +20,8 @@ const cormorant = Cormorant_Garamond({
 });
 
 export const metadata: Metadata = {
-  title: `${siteBranding.title} — boceto`,
-  description: "Boceto de página web, contenido a sustituir al 100%.",
+  title: `${siteBranding.title}`,
+  description: `${siteBranding.title}: ${siteBranding.tagline}. Amenización con música en vivo para bodas, hoteles, restaurantes y eventos corporativos o privados. Música para eventos en Sevilla con repertorio a medida.`,
 };
 
 export default function RootLayout({

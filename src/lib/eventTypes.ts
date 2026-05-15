@@ -10,22 +10,22 @@ export const eventTypes: EventTypeItem[] = [
   {
     id: "1",
     title: "Bodas",
-    description: "Descripción corta (placeholder).",
-    image: "/IMG_4126.JPEG",
+    description: "Amenización de ceremonias sacras o civiles, así como cóctel y banquete.",
+    image: "/raquel-violinista-bodas.jpg",
     icon: "heart",
   },
   {
     id: "2",
     title: "Hoteles y Restaurantes",
-    description: "Descripción corta (placeholder).",
-    image: "/IMG_4117.JPEG",
+    description: "Amenización de eventos en hoteles y restaurantes.",
+    image: "/raquel-violinista-hoteles-restaurantes.jpg",
     icon: "briefcase",
   },
   {
     id: "3",
     title: "Otros Eventos",
-    description: "Descripción corta (placeholder).",
-    image: "/IMG_4126.JPEG",
+    description: "Amenización de eventos privados y corporativos.",
+    image: "/raquel-violinista-eventos.jpg",
     icon: "notes",
   },
 ];

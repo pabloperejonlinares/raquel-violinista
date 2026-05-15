@@ -12,14 +12,11 @@ export function EventTypesSection() {
         <h2 className="font-heading text-center text-2xl font-semibold text-zinc-900 sm:text-3xl">
           Tipos de eventos
         </h2>
-        <p className="mx-auto mt-3 max-w-2xl text-center text-sm text-zinc-600 sm:text-base">
-          Subtítulo o claim de sección (placeholder, sustituir luego al 100%).
-        </p>
         <ul className="mt-10 grid list-none grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {eventTypes.map((item) => (
             <li key={item.id}>
               <Card className="h-full overflow-hidden p-0 shadow-sm ring-1 ring-zinc-200/80">
-                <div className="relative aspect-[4/3] w-full">
+                <div className="relative aspect-4/3 w-full">
                   <Image
                     src={item.image}
                     alt={item.title}

@@ -1,24 +1,21 @@
 "use client";
 
 import { Card } from "@heroui/react";
-import Image from "next/image";
-
-const ABOUT_IMAGE = "/IMG_4117.JPEG";
 
 const features = [
   {
-    title: "Punto destacado 1",
-    text: "Texto breve de relleno. Sustituir con contenido final.",
+    title: "Repertorio personalizado",
+    text: "Música adaptada a cada evento y a cada pareja.",
     tone: "bg-violet-50" as const,
   },
   {
-    title: "Punto destacado 2",
-    text: "Texto breve de relleno. Sustituir con contenido final.",
+    title: "Elegancia y emoción",
+    text: "El violín crea una atmósfera única y sofisticada.",
     tone: "bg-rose-50" as const,
   },
   {
-    title: "Punto destacado 3",
-    text: "Texto breve de relleno. Sustituir con contenido final.",
+    title: "Eventos inolvidables",
+    text: "Actuaciones cuidadas para acompañar momentos especiales.",
     tone: "bg-fuchsia-50" as const,
   },
 ];
@@ -32,22 +29,20 @@ export function AboutSection() {
             <h2 className="font-heading text-2xl font-semibold text-zinc-900 sm:text-3xl">
               Sobre mí
             </h2>
-            <div className="mt-4 space-y-3 text-sm leading-relaxed text-zinc-600 sm:text-base">
+            <div className="mt-4 space-y-3 text-sm leading-relaxed text-zinc-600 sm:text-base text-justify">
               <p>
-                Párrafo de ejemplo. Aquí irá un texto de presentación sobre la
-                actividad, experiencia o formación. Este contenido es solo un
-                boceto.
+                La música ha sido siempre una parte esencial de mi vida, y a través del violín disfruto creando momentos únicos y emocionantes en bodas, hoteles, restaurantes y eventos especiales.
+                Cada actuación está cuidada al detalle para aportar una atmósfera elegante, cercana y llena de sensibilidad.
               </p>
               <p>
-                Segundo párrafo: más contexto, estilo o tipo de repertorio.
-                Cambiar al 100% en la versión final.
+                Mi repertorio combina música clásica con versiones actuales, adaptándome al estilo de cada celebración para que cada momento tenga una banda sonora especial y memorable.
               </p>
               <p>
-                Tercer párrafo: cierre o llamada a la acción suave, según
-                definas el copy definitivo.
+                Detrás de cada interpretación hay pasión, dedicación y mucho cuidado por los detalles.
+                Mi objetivo es que cada persona recuerde no solo la música, sino también la emoción que sintió al escucharla en directo.
               </p>
             </div>
-            <ul className="mt-8 space-y-3" role="list">
+            <ul className="mt-8 space-y-3">
               {features.map((f) => (
                 <li key={f.title}>
                   <Card
