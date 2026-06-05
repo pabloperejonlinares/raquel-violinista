@@ -24,7 +24,7 @@ export function EventTypesSection() {
                   <div className="relative aspect-4/3 w-full">
                     <Image
                       src={item.image}
-                      alt={item.title}
+                      alt={item.imageAlt}
                       fill
                       className="object-cover transition-transform duration-300 group-hover:scale-[1.02]"
                       sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"

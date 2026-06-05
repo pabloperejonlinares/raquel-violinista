@@ -1,9 +1,13 @@
 import { Text } from "@heroui/react";
 import Image from "next/image";
+import NextLink from "next/link";
 
 import { siteBranding } from "@/lib/siteBranding";
 
 const HERO_SRC = "/raquel-violinista.JPEG";
+
+const ctaClass =
+  "mt-6 inline-flex items-center justify-center rounded-lg bg-violet-600 px-5 py-2.5 text-sm font-medium text-white no-underline transition-colors hover:bg-violet-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-violet-500 focus-visible:ring-offset-2";
 
 export function Hero() {
   return (

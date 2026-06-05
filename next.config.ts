@@ -10,6 +10,20 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  async redirects() {
+    return [
+      {
+        source: "/hoteles",
+        destination: "/hoteles-restaurantes",
+        permanent: true,
+      },
+      {
+        source: "/restaurantes",
+        destination: "/hoteles-restaurantes",
+        permanent: true,
+      },
+    ];
+  },
 };
 
 export default nextConfig;

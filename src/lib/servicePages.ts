@@ -1,5 +1,6 @@
 import { siteBranding } from "@/lib/siteBranding";
 import { siteContact } from "@/lib/siteContact";
+import { getPageMetadata } from "@/lib/siteMetadata";
 
 export type ServiceFeature = {
   title: string;
@@ -265,20 +266,12 @@ export const servicePages = {
 export type ServicePageKey = keyof typeof servicePages;
 
 export function getServicePageMetadata(page: ServicePageConfig) {
-  return {
+  return getPageMetadata({
     title: page.metadataTitle,
     description: page.metadataDescription,
-    keywords: page.keywords,
-    alternates: {
-      canonical: page.path,
-    },
-    openGraph: {
-      title: page.metadataTitle,
-      description: page.metadataDescription,
-      url: page.path,
-      type: "website" as const,
-      locale: "es_ES",
-      images: [{ url: page.heroImage, alt: page.heroImageAlt }],
-    },
-  };
+    path: page.path,
+    image: page.heroImage,
+    imageAlt: page.heroImageAlt,
+    keywords: [...page.keywords],
+  });
 }
