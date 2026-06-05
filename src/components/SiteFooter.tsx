@@ -1,6 +1,7 @@
 "use client";
 
 import { Link } from "@heroui/react";
+import NextLink from "next/link";
 
 import {
   InstagramIcon,
@@ -9,6 +10,7 @@ import {
 } from "@/components/SocialIcons";
 import { siteBranding } from "@/lib/siteBranding";
 import { siteContact } from "@/lib/siteContact";
+import { mainNavItems } from "@/lib/siteNav";
 import { socialLinks } from "@/lib/siteSocial";
 
 const socialIconMap = {
@@ -23,7 +25,7 @@ export function SiteFooter() {
   return (
     <footer className="bg-slate-900 text-zinc-200">
       <div className="mx-auto max-w-6xl px-4 py-10 md:px-6">
-        <div className="grid grid-cols-1 gap-10 md:grid-cols-3 md:gap-8">
+        <div className="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-4 md:gap-8">
           <div>
             <div className="flex items-center gap-3">
               <span
@@ -42,6 +44,23 @@ export function SiteFooter() {
             <p className="mt-4 text-sm leading-relaxed text-zinc-400">
               {siteBranding.slogan}
             </p>
+          </div>
+          <div>
+            <h2 className="font-heading text-lg font-semibold text-white">Servicios</h2>
+            <ul className="mt-4 space-y-3 text-sm">
+              {mainNavItems
+                .filter((item) => item.href !== "/")
+                .map((item) => (
+                  <li key={item.href}>
+                    <NextLink
+                      href={item.href}
+                      className="text-zinc-200 no-underline hover:text-violet-300"
+                    >
+                      {item.label}
+                    </NextLink>
+                  </li>
+                ))}
+            </ul>
           </div>
           <div>
             <h2 className="font-heading text-lg font-semibold text-white">Contacto</h2>

@@ -1,5 +1,10 @@
 import type { Metadata } from "next";
 import { Cormorant_Garamond, Geist, Geist_Mono } from "next/font/google";
+import {
+  defaultOgImage,
+  defaultOgImageAlt,
+  sharedTwitter,
+} from "@/lib/siteMetadata";
 import { siteBranding } from "@/lib/siteBranding";
 import "@/styles/globals.css";
 
@@ -30,7 +35,9 @@ export const metadata: Metadata = {
     locale: "es_ES",
     type: "website",
     siteName: siteBranding.title,
+    images: [{ url: defaultOgImage, alt: defaultOgImageAlt }],
   },
+  twitter: sharedTwitter,
 };
 
 export default function RootLayout({
