@@ -3,6 +3,7 @@ export type EventTypeItem = {
   title: string;
   description: string;
   image: string;
+  href: string;
   icon: "heart" | "briefcase" | "notes" | "users" | "glass" | "star";
 };
 
@@ -10,22 +11,25 @@ export const eventTypes: EventTypeItem[] = [
   {
     id: "1",
     title: "Bodas",
-    description: "Amenización de ceremonias sacras o civiles, así como cóctel y banquete.",
+    description: "Ceremonias sacras y civiles, cóctel y banquete con repertorio adaptado.",
     image: "/raquel-violinista-bodas.jpg",
+    href: "/bodas",
     icon: "heart",
   },
   {
     id: "2",
     title: "Hoteles y Restaurantes",
-    description: "Amenización de eventos en hoteles y restaurantes.",
+    description: "Galas, cenas especiales y eventos en hoteles y restaurantes de Sevilla.",
     image: "/raquel-violinista-hoteles-restaurantes.jpg",
+    href: "/hoteles-restaurantes",
     icon: "briefcase",
   },
   {
     id: "3",
     title: "Otros Eventos",
-    description: "Amenización de eventos privados y corporativos.",
+    description: "Eventos privados, corporativos e inauguraciones en Sevilla.",
     image: "/raquel-violinista-eventos.jpg",
+    href: "/otros-eventos",
     icon: "notes",
   },
 ];

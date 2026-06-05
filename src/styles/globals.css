@@ -18,6 +18,16 @@
   --font-mono: var(--font-geist-mono), ui-monospace, monospace;
 }
 
+@layer components {
+  .drawer__content--right {
+    @apply w-full max-w-none;
+  }
+
+  .drawer__content--right .drawer__dialog {
+    @apply m-0 rounded-none;
+  }
+}
+
 @layer base {
   .font-heading {
     font-family: var(--font-serif), "Georgia", "Times New Roman", serif;

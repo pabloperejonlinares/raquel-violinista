@@ -4,8 +4,8 @@ import { Card } from "@heroui/react";
 
 const features = [
   {
-    title: "Repertorio personalizado",
-    text: "Música adaptada a cada evento y a cada pareja.",
+    title: "Repertorio amplio y variado",
+    text: "Música adaptada a cada evento.",
     tone: "bg-violet-50" as const,
   },
   {
@@ -35,7 +35,8 @@ export function AboutSection() {
                 Cada actuación está cuidada al detalle para aportar una atmósfera elegante, cercana y llena de sensibilidad.
               </p>
               <p>
-                Mi repertorio combina música clásica con versiones actuales, adaptándome al estilo de cada celebración para que cada momento tenga una banda sonora especial y memorable.
+                Dispongo de un repertorio de violín en vivo elegante, emotivo y lleno de canciones que todos reconocen y disfrutan. Desde clásicos inolvidables y grandes bandas sonoras hasta éxitos de artistas como Christina Perri, Ed Sheeran, Frank Sinatra, Elvis Presley, David Bowie, ABBA o Coldplay.
+                Un repertorio pensado para emocionar, despertar recuerdos y crear una atmósfera única en cada evento.
               </p>
               <p>
                 Detrás de cada interpretación hay pasión, dedicación y mucho cuidado por los detalles.
