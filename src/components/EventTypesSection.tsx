@@ -2,6 +2,7 @@
 
 import { Card } from "@heroui/react";
 import Image from "next/image";
+import NextLink from "next/link";
 import { eventTypes } from "@/lib/eventTypes";
 import { EventTypeIcon } from "./EventTypeCardIcons";
 
@@ -15,26 +16,31 @@ export function EventTypesSection() {
         <ul className="mt-10 grid list-none grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {eventTypes.map((item) => (
             <li key={item.id}>
-              <Card className="h-full overflow-hidden p-0 shadow-sm ring-1 ring-zinc-200/80">
-                <div className="relative aspect-4/3 w-full">
-                  <Image
-                    src={item.image}
-                    alt={item.title}
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                  />
-                  <div className="absolute bottom-3 left-3 flex h-10 w-10 items-center justify-center rounded-full border border-white/90 bg-white shadow-md">
-                    <EventTypeIcon name={item.icon} />
+              <NextLink
+                href={item.href}
+                className="group block h-full no-underline focus:outline-none focus-visible:ring-2 focus-visible:ring-violet-500 focus-visible:ring-offset-2"
+              >
+                <Card className="h-full overflow-hidden p-0 shadow-sm ring-1 ring-zinc-200/80 transition-shadow group-hover:shadow-md group-hover:ring-violet-200">
+                  <div className="relative aspect-4/3 w-full">
+                    <Image
+                      src={item.image}
+                      alt={item.title}
+                      fill
+                      className="object-cover transition-transform duration-300 group-hover:scale-[1.02]"
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    />
+                    <div className="absolute bottom-3 left-3 flex h-10 w-10 items-center justify-center rounded-full border border-white/90 bg-white shadow-md">
+                      <EventTypeIcon name={item.icon} />
+                    </div>
                   </div>
-                </div>
-                <div className="p-4">
-                  <h3 className="text-base font-semibold text-zinc-900">{item.title}</h3>
-                  <p className="mt-1.5 text-sm text-zinc-600">
-                    {item.description}
-                  </p>
-                </div>
-              </Card>
+                  <div className="p-4">
+                    <h3 className="text-base font-semibold text-zinc-900">{item.title}</h3>
+                    <p className="mt-1.5 text-sm text-zinc-600">
+                      {item.description}
+                    </p>
+                  </div>
+                </Card>
+              </NextLink>
             </li>
           ))}
         </ul>

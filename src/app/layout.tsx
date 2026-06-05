@@ -20,8 +20,17 @@ const cormorant = Cormorant_Garamond({
 });
 
 export const metadata: Metadata = {
-  title: `${siteBranding.title}`,
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "https://raquelreinaviolinista.com"),
+  title: {
+    default: siteBranding.title,
+    template: `%s | ${siteBranding.title}`,
+  },
   description: `${siteBranding.title}: ${siteBranding.tagline}. Amenización con música en vivo para bodas, hoteles, restaurantes y eventos corporativos o privados. Música para eventos en Sevilla con repertorio a medida.`,
+  openGraph: {
+    locale: "es_ES",
+    type: "website",
+    siteName: siteBranding.title,
+  },
 };
 
 export default function RootLayout({

@@ -66,7 +66,7 @@ export function SiteHeader() {
               </span>
             </Drawer.Trigger>
             <Drawer.Backdrop isDismissable>
-              <Drawer.Content className="max-w-sm" placement="right">
+              <Drawer.Content placement="right">
                 <Drawer.Dialog>
                   <Drawer.Header className="flex items-center justify-between border-b border-zinc-200 px-1 py-0">
                     <Drawer.Heading className="font-heading px-2 text-lg font-semibold">Menú</Drawer.Heading>
