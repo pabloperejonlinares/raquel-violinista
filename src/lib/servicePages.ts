@@ -105,7 +105,7 @@ export const servicePages = {
       },
       {
         question: "¿Te desplazas fuera de Sevilla capital?",
-        answer: `Actúo principalmente en ${siteContact.location} y provincia. Consulta también desplazamientos a otras provincias.`,
+        answer: `Actúo principalmente en ${siteContact.location} y provincia, pero también me desplazo a otras provincias de Andalucía y sur de Extremadura.`,
       },
     ],
     relatedLinks: [
