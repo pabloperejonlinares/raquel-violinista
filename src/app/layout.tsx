@@ -7,6 +7,7 @@ import {
 } from "@/lib/siteMetadata";
 import { siteBranding } from "@/lib/siteBranding";
 import "@/styles/globals.css";
+import { Analytics } from "@vercel/analytics/next"
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -50,7 +51,10 @@ export default function RootLayout({
       lang="es"
       className={`${geistSans.variable} ${geistMono.variable} ${cormorant.variable} h-full antialiased`}
     >
-      <body className="min-h-dvh font-sans flex flex-col text-zinc-900">{children}</body>
+      <body className="min-h-dvh font-sans flex flex-col text-zinc-900">
+        {children}
+        <Analytics />
+      </body>
     </html>
   );
 }
