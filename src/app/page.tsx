@@ -9,7 +9,7 @@ import { getHomeStructuredData } from "@/lib/siteStructuredData";
 
 import type { Metadata } from "next";
 
-const homeDescription = `${siteBranding.title}: ${siteBranding.tagline}. Amenización con música en vivo para bodas, hoteles, restaurantes y eventos corporativos o privados. Música para eventos en Sevilla con repertorio a medida.`;
+const homeDescription = `${siteBranding.title}: ${siteBranding.tagline}. Amenización con música en vivo para bodas, hoteles, restaurantes y eventos corporativos o privados.`;
 
 export const metadata: Metadata = getPageMetadata({
   title: siteBranding.tagline,
