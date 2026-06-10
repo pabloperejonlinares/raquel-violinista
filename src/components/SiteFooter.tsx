@@ -10,8 +10,9 @@ import {
 } from "@/components/SocialIcons";
 import { siteBranding } from "@/lib/siteBranding";
 import { siteContact } from "@/lib/siteContact";
+import { instagramLinkRel } from "@/lib/instagramSectionContent";
 import { mainNavItems } from "@/lib/siteNav";
-import { socialLinks } from "@/lib/siteSocial";
+import { instagramProfile, socialLinks } from "@/lib/siteSocial";
 
 const socialIconMap = {
   instagram: InstagramIcon,
@@ -86,6 +87,18 @@ export function SiteFooter() {
           </div>
           <div>
             <h2 className="font-heading text-lg font-semibold text-white">Sígueme</h2>
+            <p className="mt-2 text-sm text-zinc-400">
+              Vídeos y fotos de actuaciones en{" "}
+              <Link
+                href={instagramProfile.href}
+                target="_blank"
+                rel={instagramLinkRel}
+                className="text-zinc-300 no-underline hover:text-violet-300"
+              >
+                Instagram
+              </Link>
+              .
+            </p>
             <ul className="mt-4 flex list-none flex-wrap gap-3">
               {socialLinks.map((social) => {
                 const Icon = socialIconMap[social.id];
@@ -94,7 +107,7 @@ export function SiteFooter() {
                     <Link
                       href={social.href}
                       target="_blank"
-                      rel="noopener noreferrer"
+                      rel={social.id === "instagram" ? instagramLinkRel : "noopener noreferrer"}
                       className={socialButtonClass}
                       aria-label={social.ariaLabel}
                     >

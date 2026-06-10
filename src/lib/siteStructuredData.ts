@@ -1,6 +1,6 @@
 import { siteBranding } from "@/lib/siteBranding";
 import { siteContact } from "@/lib/siteContact";
-import { socialLinks } from "@/lib/siteSocial";
+import { getPersonSameAsLinks } from "@/lib/siteSocial";
 import { absoluteUrl } from "@/lib/siteUrl";
 
 export function getHomeStructuredData() {
@@ -26,10 +26,7 @@ export function getHomeStructuredData() {
         "@type": "City",
         name: siteContact.location,
       },
-      sameAs: [
-        ...socialLinks.map((social) => social.href),
-        siteContact.whatsappHref,
-      ],
+      sameAs: getPersonSameAsLinks(),
     },
     {
       "@context": "https://schema.org",
@@ -41,6 +38,7 @@ export function getHomeStructuredData() {
       areaServed: `${siteContact.location}, España`,
       telephone: siteContact.phone,
       email: siteContact.email,
+      sameAs: getPersonSameAsLinks(),
     },
   ];
 }
@@ -59,6 +57,7 @@ export function getContactStructuredData() {
         telephone: siteContact.phone,
         email: siteContact.email,
         url: absoluteUrl("/"),
+        sameAs: getPersonSameAsLinks(),
       },
     },
     {

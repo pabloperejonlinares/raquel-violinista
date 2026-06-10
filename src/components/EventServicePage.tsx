@@ -3,10 +3,12 @@ import Image from "next/image";
 import NextLink from "next/link";
 
 import { JsonLd } from "@/components/JsonLd";
+import { InstagramSection } from "@/components/InstagramSection";
 import { MapPinIcon } from "@/components/SocialIcons";
 import { siteBranding } from "@/lib/siteBranding";
 import { siteContact } from "@/lib/siteContact";
 import type { ServicePageConfig } from "@/lib/servicePages";
+import { getPersonSameAsLinks } from "@/lib/siteSocial";
 import { absoluteUrl } from "@/lib/siteUrl";
 
 const primaryButtonClass =
@@ -48,6 +50,7 @@ export function EventServicePage({ page }: EventServicePageProps) {
       provider: {
         "@type": "Person",
         name: siteBranding.title,
+        sameAs: getPersonSameAsLinks(),
         areaServed: {
           "@type": "City",
           name: siteContact.location,
@@ -229,6 +232,7 @@ export function EventServicePage({ page }: EventServicePageProps) {
           </div>
         </div>
       </section>
+      <InstagramSection variant={page.instagramVariant} />
     </>
   );
 }

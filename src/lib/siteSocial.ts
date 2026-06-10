@@ -1,11 +1,15 @@
+import { siteContact } from "@/lib/siteContact";
+
+export const instagramProfile = {
+  id: "instagram",
+  label: "Instagram",
+  handle: "@raquelreina.violinista",
+  href: "https://www.instagram.com/raquelreina.violinista/",
+  ariaLabel: "Instagram: @raquelreina.violinista",
+} as const;
+
 export const socialLinks = [
-  {
-    id: "instagram",
-    label: "Instagram",
-    handle: "@raquelreina.violinista",
-    href: "https://www.instagram.com/raquelreina.violinista/",
-    ariaLabel: "Instagram: @raquelreina.violinista",
-  },
+  instagramProfile,
   {
     id: "tiktok",
     label: "TikTok",
@@ -16,3 +20,7 @@ export const socialLinks = [
 ] as const;
 
 export type SocialLink = (typeof socialLinks)[number];
+
+export function getPersonSameAsLinks() {
+  return [...socialLinks.map((social) => social.href), siteContact.whatsappHref];
+}
