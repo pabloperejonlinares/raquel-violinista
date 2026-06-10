@@ -48,8 +48,7 @@ export function ContactSection() {
             </h1>
             <p className="mt-4 text-sm leading-relaxed text-zinc-600 sm:text-base">
               ¿Tienes un evento en mente? Cuéntame qué necesitas y te responderé lo antes posible.
-              Puedes llamarme, escribirme por WhatsApp o enviarme un correo. También me encontrarás
-              en redes sociales, donde comparto momentos de mis actuaciones.
+              Puedes llamarme, escribirme por WhatsApp o enviarme un correo.
             </p>
 
             <ul className="mt-8 space-y-4">
@@ -144,13 +143,15 @@ export function ContactSection() {
 
             <div className="mt-10">
               <h2 className="font-heading text-xl font-semibold text-zinc-900 sm:text-2xl">
-                Redes sociales
+                TikTok
               </h2>
               <p className="mt-2 text-sm text-zinc-600 sm:text-base">
-                Sígueme para ver vídeos, fotos y momentos de mis actuaciones en directo.
+                También comparto momentos de mis actuaciones en TikTok.
               </p>
-              <ul className="mt-5 grid list-none gap-3 sm:grid-cols-2">
-                {socialLinks.map((social) => {
+              <ul className="mt-5 list-none">
+                {socialLinks
+                  .filter((social) => social.id !== "instagram")
+                  .map((social) => {
                   const Icon = socialIconMap[social.id];
                   return (
                     <li key={social.id}>

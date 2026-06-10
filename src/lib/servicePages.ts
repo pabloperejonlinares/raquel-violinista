@@ -1,6 +1,11 @@
+import {
+  getInstagramSeoPhrase,
+  type InstagramSectionVariant,
+} from "@/lib/instagramSectionContent";
+import { getPageMetadata } from "@/lib/siteMetadata";
 import { siteBranding } from "@/lib/siteBranding";
 import { siteContact } from "@/lib/siteContact";
-import { getPageMetadata } from "@/lib/siteMetadata";
+import { instagramProfile } from "@/lib/siteSocial";
 
 export type ServiceFeature = {
   title: string;
@@ -32,7 +37,10 @@ export type ServicePageConfig = {
   features: ServiceFeature[];
   faqs: ServiceFaq[];
   relatedLinks: { href: string; label: string }[];
+  instagramVariant: InstagramSectionVariant;
 };
+
+const instagramSeoSuffix = `${getInstagramSeoPhrase()} (${instagramProfile.handle}).`;
 
 const locationPhrase = `en ${siteContact.location} y alrededores`;
 
@@ -41,7 +49,7 @@ export const servicePages = {
     slug: "bodas",
     path: "/bodas",
     metadataTitle: "Violinista para bodas en Sevilla",
-    metadataDescription: `${siteBranding.title}: música de violín en vivo para bodas ${locationPhrase}. Ceremonias sacras y civiles con repertorio adaptado, cóctel y banquete nupcial.`,
+    metadataDescription: `${siteBranding.title}: música de violín en vivo para bodas ${locationPhrase}. Ceremonias sacras y civiles con repertorio adaptado, cóctel y banquete nupcial. ${instagramSeoSuffix}`,
     keywords: [
       "violinista bodas sevilla",
       "música boda sevilla",
@@ -113,12 +121,13 @@ export const servicePages = {
       { href: "/hoteles-restaurantes", label: "Hoteles y restaurantes" },
       { href: "/otros-eventos", label: "Otros eventos" },
     ],
+    instagramVariant: "bodas",
   },
   hotelesRestaurantes: {
     slug: "hoteles-restaurantes",
     path: "/hoteles-restaurantes",
     metadataTitle: "Violinista para hoteles y restaurantes en Sevilla",
-    metadataDescription: `${siteBranding.title}: violín en vivo para hoteles y restaurantes ${locationPhrase}. Galas, cenas especiales, bodas en hotel y eventos corporativos con repertorio elegante.`,
+    metadataDescription: `${siteBranding.title}: violín en vivo para hoteles y restaurantes ${locationPhrase}. Galas, cenas especiales, bodas en hotel y eventos corporativos con repertorio elegante. ${instagramSeoSuffix}`,
     keywords: [
       "violinista hoteles sevilla",
       "violinista restaurantes sevilla",
@@ -190,12 +199,13 @@ export const servicePages = {
       { href: "/bodas", label: "Música para bodas" },
       { href: "/otros-eventos", label: "Otros eventos" },
     ],
+    instagramVariant: "hotelesRestaurantes",
   },
   otrosEventos: {
     slug: "otros-eventos",
     path: "/otros-eventos",
     metadataTitle: "Violinista para eventos en Sevilla",
-    metadataDescription: `${siteBranding.title}: violín en vivo para eventos privados y corporativos ${locationPhrase}. Cumpleaños, galas, inauguraciones y celebraciones con repertorio a medida.`,
+    metadataDescription: `${siteBranding.title}: violín en vivo para eventos privados y corporativos ${locationPhrase}. Cumpleaños, galas, inauguraciones y celebraciones con repertorio a medida. ${instagramSeoSuffix}`,
     keywords: [
       "violinista eventos sevilla",
       "música eventos corporativos sevilla",
@@ -260,6 +270,7 @@ export const servicePages = {
       { href: "/bodas", label: "Música para bodas" },
       { href: "/hoteles-restaurantes", label: "Hoteles y restaurantes" },
     ],
+    instagramVariant: "otrosEventos",
   },
 } as const satisfies Record<string, ServicePageConfig>;
 
