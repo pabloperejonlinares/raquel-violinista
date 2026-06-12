@@ -1,5 +1,3 @@
-"use client";
-
 import { Card } from "@heroui/react";
 import NextLink from "next/link";
 
@@ -70,7 +68,7 @@ export function AboutSection() {
             </ul>
             <NextLink
               href="/contacto"
-              className="mt-8 inline-flex items-center justify-center rounded-lg bg-violet-600 px-5 py-2.5 text-sm font-medium text-white no-underline transition-colors hover:bg-violet-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-violet-500 focus-visible:ring-offset-2"
+              className="mt-8 inline-flex min-h-11 items-center justify-center rounded-lg bg-violet-600 px-5 py-2.5 text-sm font-medium text-white no-underline transition-colors hover:bg-violet-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-violet-500 focus-visible:ring-offset-2"
             >
               Contactar para tu evento
             </NextLink>

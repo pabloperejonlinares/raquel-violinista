@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 import { siteBranding } from "@/lib/siteBranding";
 
-export const defaultOgImage = "/raquel-violinista.JPEG";
+export const defaultOgImage = "/raquel-violinista.webp";
 
 export const defaultOgImageAlt =
   "Raquel Reina Violinista con el violín en exteriores, junto al agua";
@@ -15,6 +15,17 @@ const sharedOpenGraph = {
 
 export const sharedTwitter = {
   card: "summary_large_image" as const,
+};
+
+export const sharedRobots: Metadata["robots"] = {
+  index: true,
+  follow: true,
+  googleBot: {
+    index: true,
+    follow: true,
+    "max-image-preview": "large",
+    "max-snippet": -1,
+  },
 };
 
 type PageMetadataOptions = {
@@ -37,6 +48,7 @@ export function getPageMetadata({
   return {
     title,
     description,
+    robots: sharedRobots,
     ...(keywords ? { keywords } : {}),
     alternates: {
       canonical: path,

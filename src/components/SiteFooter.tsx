@@ -20,7 +20,7 @@ const socialIconMap = {
 } as const;
 
 const socialButtonClass =
-  "inline-flex h-9 w-9 items-center justify-center rounded-full border border-zinc-600 text-zinc-200 no-underline hover:border-violet-400 hover:text-violet-300";
+  "inline-flex h-11 w-11 items-center justify-center rounded-full border border-zinc-600 text-zinc-200 no-underline hover:border-violet-400 hover:text-violet-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-violet-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900";
 
 export function SiteFooter() {
   return (

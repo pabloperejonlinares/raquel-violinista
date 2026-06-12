@@ -58,7 +58,7 @@ export const servicePages = {
       "música ceremonia religiosa boda",
       "violinista cóctel boda",
     ],
-    heroImage: "/raquel-violinista-bodas.jpg",
+    heroImage: "/raquel-violinista-bodas.webp",
     heroImageAlt:
       "Raquel Reina violinista amenizando una boda con música en vivo en Sevilla",
     h1: "Música de violín para bodas en Sevilla",
@@ -136,7 +136,7 @@ export const servicePages = {
       "amenización musical hoteles restaurantes",
       "música en vivo sevilla",
     ],
-    heroImage: "/raquel-violinista-hoteles-restaurantes.jpg",
+    heroImage: "/raquel-violinista-hoteles-restaurantes.webp",
     heroImageAlt:
       "Violinista amenizando un evento en un hotel o restaurante de Sevilla con música en vivo",
     h1: "Música en vivo para hoteles y restaurantes en Sevilla",
@@ -213,7 +213,7 @@ export const servicePages = {
       "música eventos privados sevilla",
       "amenización musical eventos",
     ],
-    heroImage: "/raquel-violinista-eventos.jpg",
+    heroImage: "/raquel-violinista-eventos.webp",
     heroImageAlt:
       "Raquel Reina violinista en un evento privado con música en vivo en Sevilla",
     h1: "Música de violín para eventos especiales en Sevilla",

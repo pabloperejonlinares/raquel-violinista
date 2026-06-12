@@ -19,7 +19,7 @@ export function getHomeStructuredData() {
       name: "Raquel Reina",
       alternateName: siteBranding.title,
       url: absoluteUrl("/"),
-      image: absoluteUrl("/raquel-violinista.JPEG"),
+      image: absoluteUrl("/raquel-violinista.webp"),
       jobTitle: "Violinista profesional",
       description: siteBranding.tagline,
       areaServed: {
@@ -33,7 +33,7 @@ export function getHomeStructuredData() {
       "@type": "ProfessionalService",
       name: siteBranding.title,
       url: absoluteUrl("/"),
-      image: absoluteUrl("/raquel-violinista.JPEG"),
+      image: absoluteUrl("/raquel-violinista.webp"),
       description: `${siteBranding.tagline}. Amenización con violín en vivo para bodas, hoteles, restaurantes y eventos en Sevilla.`,
       areaServed: `${siteContact.location}, España`,
       telephone: siteContact.phone,

@@ -81,6 +81,7 @@ export function SiteHeader() {
                             key={item.href}
                             href={item.href}
                             onClick={() => menuState.close()}
+                            aria-current={active ? "page" : undefined}
                             className={[
                               "px-4 py-3.5 text-base no-underline transition-colors",
                               active

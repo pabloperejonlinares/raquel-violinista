@@ -8,8 +8,13 @@ type SitePageLayoutProps = Readonly<{
 export function SitePageLayout({ children }: SitePageLayoutProps) {
   return (
     <div id="top" className="flex min-h-dvh w-full flex-col bg-white text-zinc-900">
+      <a href="#main-content" className="skip-link">
+        Saltar al contenido principal
+      </a>
       <SiteHeader />
-      <main className="min-w-0 w-full flex-1">{children}</main>
+      <main id="main-content" className="min-w-0 w-full flex-1">
+        {children}
+      </main>
       <SiteFooter />
     </div>
   );
