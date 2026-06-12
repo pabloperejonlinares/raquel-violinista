@@ -3,7 +3,7 @@ import Image from "next/image";
 
 import { siteBranding } from "@/lib/siteBranding";
 
-const HERO_SRC = "/raquel-violinista.JPEG";
+const HERO_SRC = "/raquel-violinista.webp";
 
 export function Hero() {
   return (

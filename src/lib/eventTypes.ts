@@ -13,7 +13,7 @@ export const eventTypes: EventTypeItem[] = [
     id: "1",
     title: "Bodas",
     description: "Ceremonias sacras y civiles, cóctel y banquete con repertorio adaptado.",
-    image: "/raquel-violinista-bodas.jpg",
+    image: "/raquel-violinista-bodas.webp",
     imageAlt:
       "Raquel Reina violinista amenizando una boda con música en vivo en Sevilla",
     href: "/bodas",
@@ -23,7 +23,7 @@ export const eventTypes: EventTypeItem[] = [
     id: "2",
     title: "Hoteles y Restaurantes",
     description: "Galas, cenas especiales y eventos en hoteles y restaurantes de Sevilla.",
-    image: "/raquel-violinista-hoteles-restaurantes.jpg",
+    image: "/raquel-violinista-hoteles-restaurantes.webp",
     imageAlt:
       "Raquel Reina violinista en un hotel o restaurante de Sevilla con música en vivo",
     href: "/hoteles-restaurantes",
@@ -33,7 +33,7 @@ export const eventTypes: EventTypeItem[] = [
     id: "3",
     title: "Otros Eventos",
     description: "Eventos privados, corporativos e inauguraciones en Sevilla.",
-    image: "/raquel-violinista-eventos.jpg",
+    image: "/raquel-violinista-eventos.webp",
     imageAlt:
       "Raquel Reina violinista en un evento especial con música en vivo en Sevilla",
     href: "/otros-eventos",

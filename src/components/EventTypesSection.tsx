@@ -1,5 +1,3 @@
-"use client";
-
 import { Card } from "@heroui/react";
 import Image from "next/image";
 import NextLink from "next/link";
@@ -29,7 +27,7 @@ export function EventTypesSection() {
                       className="object-cover transition-transform duration-300 group-hover:scale-[1.02]"
                       sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                     />
-                    <div className="absolute bottom-3 left-3 flex h-10 w-10 items-center justify-center rounded-full border border-white/90 bg-white shadow-md">
+                    <div className="absolute bottom-3 left-3 flex h-10 w-10 items-center justify-center rounded-full border border-white/90 bg-white shadow-md" aria-hidden>
                       <EventTypeIcon name={item.icon} />
                     </div>
                   </div>

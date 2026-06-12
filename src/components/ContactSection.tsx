@@ -13,7 +13,7 @@ import { siteBranding } from "@/lib/siteBranding";
 import { siteContact } from "@/lib/siteContact";
 import { socialLinks } from "@/lib/siteSocial";
 
-const CONTACT_IMAGE = "/IMG_4126.JPEG";
+const CONTACT_IMAGE = "/raquel-reina-contacto.webp";
 
 const socialIconMap = {
   instagram: InstagramIcon,

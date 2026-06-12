@@ -15,7 +15,7 @@ export const metadata: Metadata = getPageMetadata({
   title: "Contacto",
   description: `Contacta con ${siteBranding.title} para bodas, hoteles, restaurantes y eventos en ${siteContact.location}. Teléfono, WhatsApp y email. ${getInstagramSeoPhrase()} (${instagramProfile.handle}).`,
   path: "/contacto",
-  image: "/IMG_4126.JPEG",
+  image: "/raquel-reina-contacto.webp",
   imageAlt: "Raquel Reina con el violín en un entorno natural",
 });
 
