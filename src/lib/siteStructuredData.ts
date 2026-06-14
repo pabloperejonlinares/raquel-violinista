@@ -12,6 +12,16 @@ export function getHomeStructuredData() {
       url: absoluteUrl("/"),
       description: `${siteBranding.tagline}. ${siteBranding.slogan}`,
       inLanguage: "es-ES",
+      publisher: {
+        "@type": "Organization",
+        name: siteBranding.title,
+        logo: {
+          "@type": "ImageObject",
+          url: absoluteUrl("/raquel-reina-logo-mark-512.webp"),
+          width: 512,
+          height: 512,
+        },
+      },
     },
     {
       "@context": "https://schema.org",
@@ -34,6 +44,7 @@ export function getHomeStructuredData() {
       name: siteBranding.title,
       url: absoluteUrl("/"),
       image: absoluteUrl("/raquel-violinista.webp"),
+      logo: absoluteUrl("/raquel-reina-logo-mark-512.webp"),
       description: `${siteBranding.tagline}. Amenización con violín en vivo para bodas, hoteles, restaurantes y eventos en Sevilla.`,
       areaServed: `${siteContact.location}, España`,
       telephone: siteContact.phone,

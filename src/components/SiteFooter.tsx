@@ -8,6 +8,7 @@ import {
   TikTokIcon,
   WhatsAppIcon,
 } from "@/components/SocialIcons";
+import { SiteLogo } from "@/components/SiteLogo";
 import { siteBranding } from "@/lib/siteBranding";
 import { siteContact } from "@/lib/siteContact";
 import { instagramLinkRel } from "@/lib/instagramSectionContent";
@@ -29,17 +30,8 @@ export function SiteFooter() {
         <div className="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-4 md:gap-8">
           <div>
             <div className="flex items-center gap-3">
-              <span
-                className="flex h-9 w-9 items-center justify-center rounded-full bg-violet-500 text-sm font-semibold text-white"
-                aria-hidden
-              >
-                {siteBranding.mark}
-              </span>
-              <div>
-                <p className="font-heading text-lg font-semibold text-white">
-                  {siteBranding.title}
-                </p>
-                <p className="text-sm text-zinc-400">{siteBranding.tagline}</p>
+              <div className="rounded-lg bg-white p-2">
+                <SiteLogo variant="full" className="h-16 w-auto" />
               </div>
             </div>
             <p className="mt-4 text-sm leading-relaxed text-zinc-400">
