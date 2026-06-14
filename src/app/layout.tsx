@@ -33,7 +33,7 @@ const cormorant = Cormorant_Garamond({
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
-  themeColor: "#7c3aed",
+  themeColor: "#ffffff",
 };
 
 export const metadata: Metadata = {
@@ -50,6 +50,22 @@ export const metadata: Metadata = {
   creator: "Raquel Reina",
   category: "music",
   robots: sharedRobots,
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      {
+        url: "/raquel-reina-logo-mark-192.webp",
+        type: "image/webp",
+        sizes: "192x192",
+      },
+      {
+        url: "/raquel-reina-logo-mark-512.webp",
+        type: "image/webp",
+        sizes: "512x512",
+      },
+    ],
+    apple: [{ url: "/apple-icon.png", sizes: "180x180", type: "image/png" }],
+  },
   openGraph: {
     locale: "es_ES",
     type: "website",

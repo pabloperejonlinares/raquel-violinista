@@ -4,6 +4,7 @@ import { usePathname } from "next/navigation";
 import NextLink from "next/link";
 import { Drawer, Link, useOverlayState } from "@heroui/react";
 
+import { SiteLogo } from "@/components/SiteLogo";
 import { siteBranding } from "@/lib/siteBranding";
 import { siteContact } from "@/lib/siteContact";
 import { mainNavItems } from "@/lib/siteNav";
@@ -25,16 +26,12 @@ export function SiteHeader() {
             href="/"
             className="text-foreground flex min-w-0 items-center gap-3 no-underline hover:opacity-90"
           >
-            <span
-              className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-violet-600 text-lg font-semibold text-white"
-              aria-hidden
-            >
-              {siteBranding.mark}
-            </span>
-            <span className="min-w-0 text-left">
-              <span className="font-heading text-foreground block text-lg font-semibold">
-                {siteBranding.title}
-              </span>
+            <SiteLogo
+              variant="full"
+              priority
+              className="h-14 w-auto shrink-0"
+            />
+            <span className="hidden min-w-0 text-left lg:block">
               <span className="text-sm text-zinc-500">{siteBranding.tagline}</span>
             </span>
           </Link>
