@@ -30,8 +30,8 @@ export function SiteFooter() {
         <div className="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-4 md:gap-8">
           <div>
             <div className="flex items-center gap-3">
-              <div className="rounded-lg bg-white p-2">
-                <SiteLogo variant="full" className="h-16 w-auto" />
+              <div className="rounded-lg bg-white p-3">
+                <SiteLogo variant="full" className="h-24 w-auto sm:h-28" />
               </div>
             </div>
             <p className="mt-4 text-sm leading-relaxed text-zinc-400">
