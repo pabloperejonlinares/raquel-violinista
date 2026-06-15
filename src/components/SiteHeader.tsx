@@ -20,18 +20,21 @@ export function SiteHeader() {
 
   return (
     <header className="border-b border-zinc-200/80 bg-white">
-      <div className="mx-auto flex max-w-6xl flex-col gap-3 px-4 py-4 md:px-6">
+      <div className="mx-auto flex max-w-6xl flex-col gap-3 px-4 py-3 md:px-6">
         <div className="flex items-center justify-between gap-4">
           <Link
             href="/"
             className="text-foreground flex min-w-0 items-center gap-3 no-underline hover:opacity-90"
           >
             <SiteLogo
-              variant="full"
+              variant="mark"
               priority
-              className="h-14 w-auto shrink-0"
+              className="h-14 w-14 shrink-0"
             />
-            <span className="hidden min-w-0 text-left lg:block">
+            <span className="min-w-0 text-left">
+              <span className="font-heading text-foreground block text-lg font-semibold leading-tight">
+                {siteBranding.title}
+              </span>
               <span className="text-sm text-zinc-500">{siteBranding.tagline}</span>
             </span>
           </Link>
