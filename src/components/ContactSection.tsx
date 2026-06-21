@@ -12,6 +12,7 @@ import {
 import { siteBranding } from "@/lib/siteBranding";
 import { siteContact } from "@/lib/siteContact";
 import { socialLinks } from "@/lib/siteSocial";
+import { InstagramSection } from "@/components/InstagramSection";
 
 const CONTACT_IMAGE = "/raquel-reina-contacto.webp";
 
@@ -140,6 +141,8 @@ export function ContactSection() {
                 </Card>
               </li>
             </ul>
+
+            <InstagramSection variant="contacto" />
 
             <div className="mt-10">
               <h2 className="font-heading text-xl font-semibold text-zinc-900 sm:text-2xl">

@@ -1,5 +1,4 @@
 import { ContactSection } from "@/components/ContactSection";
-import { InstagramSection } from "@/components/InstagramSection";
 import { JsonLd } from "@/components/JsonLd";
 import { SitePageLayout } from "@/components/SitePageLayout";
 import { getInstagramSeoPhrase } from "@/lib/instagramSectionContent";
@@ -24,7 +23,6 @@ export default function ContactoPage() {
     <SitePageLayout>
       <JsonLd data={getContactStructuredData()} />
       <ContactSection />
-      <InstagramSection variant="contacto" />
     </SitePageLayout>
   );
 }
