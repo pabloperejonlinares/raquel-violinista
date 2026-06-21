@@ -13,9 +13,14 @@ export type ServiceFeature = {
   tone: "bg-violet-50" | "bg-rose-50" | "bg-fuchsia-50";
 };
 
+export type ServiceParagraph = {
+  subtitle?: string;
+  text: string;
+};
+
 export type ServiceSection = {
   title: string;
-  paragraphs: string[];
+  paragraphs: ServiceParagraph[];
 };
 
 export type ServiceFaq = {
@@ -65,23 +70,35 @@ export const servicePages = {
     intro: `Tu boda merece una banda sonora tan especial como el día. Como violinista profesional ${locationPhrase}, acompaño cada instante con sensibilidad, elegancia y un repertorio pensado para emocionar a vosotros y a vuestros invitados.`,
     sections: [
       {
-        title: "Ceremonias sacras y civiles",
+        title: "Ceremonias religiosas y civiles: La Banda Sonora de Vuestro «Sí, Quiero»",
         paragraphs: [
-          `Amenizo bodas sacras y civiles con un repertorio cuidadosamente adaptado a cada tipo de ceremonia. En una boda religiosa, el violín aporta solemnidad y calma con piezas clásicas, himnos y melodías que respetan el carácter del momento. En una ceremonia civil, la música puede ser más íntima y personal, con canciones románticas, bandas sonoras y temas que hablan de vuestra historia.`,
-          `Antes del gran día, hablamos de vuestras preferencias musicales, el orden de la ceremonia y los momentos clave —entrada, interludios, firma o intercambio de anillos y salida— para que cada nota encaje a la perfección.`,
+          {
+            text: "La música de vuestra ceremonia debe ser tan única como vuestra historia de amor. Por eso, puedo montar aquellas canciones especiales que queréis que suenen en los momentos más importantes.",
+          },
+          {
+            subtitle: "Ceremonia Religiosa",
+            text: "Dispongo de un repertorio sacro oficial que cumple con los requisitos de la Iglesia. No obstante, si tenéis alguna petición especial (¡incluso un tema de vuestra película favorita!), os animo a consultarlo con vuestro oficiante. En muchos casos son muy flexibles y podemos integrarlo sin problema.",
+          },
+          {
+            subtitle: "Ceremonia Civil",
+            text: "El repertorio es 100% libre. Desde los clásicos de siempre hasta los temas más actuales, vosotros decidís qué banda sonora os acompañará en vuestro gran día.",
+          },
         ],
       },
       {
         title: "Cóctel y banquete de la boda",
         paragraphs: [
-          `Si lo deseáis, también puedo continuar la actuación en el cóctel y/o en el banquete de la misma boda. Es una forma maravillosa de mantener la magia musical desde la ceremonia hasta la celebración, creando una atmósfera coherente y llena de emoción.`,
-          `En el cóctel, el repertorio suele ser más animado y social; en el banquete, puede acompañar la entrada al salón, momentos especiales o simplemente ambientar la cena con melodías reconocibles que invitan a sonreír y compartir recuerdos.`,
-        ],
-      },
-      {
-        title: "Un repertorio que emociona",
-        paragraphs: [
-          `Desde clásicos atemporales y grandes bandas sonoras hasta éxitos de artistas como Christina Perri, Ed Sheeran, Frank Sinatra, ABBA o Coldplay. Cada interpretación está pensada para despertar emoción y hacer de vuestra boda un recuerdo imborrable.`,
+          {
+            text: "Tras el «sí, quiero», llega el momento de relajarse, brindar y disfrutar con vuestros invitados. Para amenizar el cóctel o el banquete, pongo a vuestra disposición dos repertorios exclusivos, muy variados y cuidadosamente diseñados para crear el ambiente perfecto:",
+          },
+          {
+            subtitle: "Tesoros Musicales",
+            text: "Una combinación perfecta de grandes éxitos de ayer y de hoy. Un viaje musical muy variado que incluye desde la elegancia de Frank Sinatra y el pop de artistas como Coldplay o Ed Sheeran, hasta el ritmo de ABBA y una cuidada selección de bandas sonoras.",
+          },
+          {
+            subtitle: "Bandas Sonoras",
+            text: "Una opción exclusiva y mágica para los amantes del cine. Una banda sonora única que transportará a vuestros invitados a través de las melodías más icónicas de la gran pantalla.",
+          },
         ],
       },
     ],
@@ -145,21 +162,31 @@ export const servicePages = {
       {
         title: "Hoteles",
         paragraphs: [
-          `Colaboro con hoteles y salones de celebraciones para amenizar bodas en hotel, aniversarios, cenas de gala, presentaciones de producto y encuentros empresariales. La música en vivo eleva la percepción del evento y transmite una imagen cuidada y sofisticada.`,
-          `Cada propuesta se adapta al espacio, al horario y al tipo de público: desde un cóctel en el vestíbulo hasta una cena en salón privado, siempre con un repertorio elegante y reconocible.`,
+          {
+            text: "Colaboro con hoteles y salones de celebraciones para amenizar bodas en hotel, aniversarios, cenas de gala, presentaciones de producto y encuentros empresariales. La música en vivo eleva la percepción del evento y transmite una imagen cuidada y sofisticada.",
+          },
+          {
+            text: "Cada propuesta se adapta al espacio, al horario y al tipo de público: desde un cóctel en el vestíbulo hasta una cena en salón privado, siempre con un repertorio elegante y reconocible.",
+          },
         ],
       },
       {
         title: "Restaurantes",
         paragraphs: [
-          `En restaurantes, el violín realza la velada sin competir con la conversación ni con la propuesta culinaria. Es ideal para cenas románticas, aniversarios, pedidas de mano, cumpleaños y celebraciones familiares en salones privados.`,
-          `Trabajo contigo para diseñar actuaciones acordes al estilo del local, la duración de la cena y el tono de la celebración: desde melodías íntimas hasta temas alegres que todos reconocen.`,
+          {
+            text: "En restaurantes, el violín realza la velada sin competir con la conversación ni con la propuesta culinaria. Es ideal para cenas románticas, aniversarios, pedidas de mano, cumpleaños y celebraciones familiares en salones privados.",
+          },
+          {
+            text: "Trabajo contigo para diseñar actuaciones acordes al estilo del local, la duración de la cena y el tono de la celebración: desde melodías íntimas hasta temas alegres que todos reconocen.",
+          },
         ],
       },
       {
         title: "Ambiente y repertorio",
         paragraphs: [
-          `El violín combina a la perfección con entornos de calidad: aporta presencia y sutileza a la vez. El repertorio incluye clásicos, bandas sonoras y versiones de éxitos que invitan a sonreír, emocionarse y compartir recuerdos.`,
+          {
+            text: "El violín combina a la perfección con entornos de calidad: aporta presencia y sutileza a la vez. El repertorio incluye clásicos, bandas sonoras y versiones de éxitos que invitan a sonreír, emocionarse y compartir recuerdos.",
+          },
         ],
       },
     ],
@@ -222,19 +249,25 @@ export const servicePages = {
       {
         title: "Eventos privados",
         paragraphs: [
-          `Cumpleaños, aniversarios, reuniones familiares o celebraciones íntimas: el violín en directo convierte cualquier espacio en un escenario lleno de emoción. La música se adapta al carácter del evento, ya sea íntimo y emotivo o alegre y festivo.`,
+          {
+            text: "Cumpleaños, aniversarios, reuniones familiares o celebraciones íntimas: el violín en directo convierte cualquier espacio en un escenario lleno de emoción. La música se adapta al carácter del evento, ya sea íntimo y emotivo o alegre y festivo.",
+          },
         ],
       },
       {
         title: "Eventos corporativos",
         paragraphs: [
-          `Presentaciones de producto, cenas de empresa, ferias, congresos y actos institucionales se benefician de una ambientación musical profesional. El violín transmite distinción y cercanía a la vez, reforzando la imagen de tu marca o entidad.`,
+          {
+            text: "Presentaciones de producto, cenas de empresa, ferias, congresos y actos institucionales se benefician de una ambientación musical profesional. El violín transmite distinción y cercanía a la vez, reforzando la imagen de tu marca o entidad.",
+          },
         ],
       },
       {
         title: "Repertorio a medida",
         paragraphs: [
-          `Antes de cada actuación, conozco el contexto del evento, el público y los momentos clave para proponer un repertorio acorde. Desde clásicos y bandas sonoras hasta versiones de éxitos actuales y atemporales.`,
+          {
+            text: "Antes de cada actuación, conozco el contexto del evento, el público y los momentos clave para proponer un repertorio acorde. Desde clásicos y bandas sonoras hasta versiones de éxitos actuales y atemporales.",
+          },
         ],
       },
     ],

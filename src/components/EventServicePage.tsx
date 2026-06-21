@@ -10,6 +10,7 @@ import { siteContact } from "@/lib/siteContact";
 import type { ServicePageConfig } from "@/lib/servicePages";
 import { getPersonSameAsLinks } from "@/lib/siteSocial";
 import { absoluteUrl } from "@/lib/siteUrl";
+import { Fragment } from "react/jsx-runtime";
 
 const primaryButtonClass =
   "inline-flex items-center justify-center gap-2 rounded-lg bg-violet-600 px-5 py-2.5 text-sm font-medium text-white no-underline transition-colors hover:bg-violet-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-violet-500 focus-visible:ring-offset-2";
@@ -125,12 +126,19 @@ export function EventServicePage({ page }: EventServicePageProps) {
               <div className="space-y-10">
                 {page.sections.map((section) => (
                   <article key={section.title}>
-                    <h2 className="font-heading text-xl font-semibold text-zinc-900 sm:text-2xl">
+                    <h2 className="font-heading text-xl font-bold text-zinc-900 sm:text-2xl">
                       {section.title}
                     </h2>
                     <div className="mt-4 space-y-3 text-sm leading-relaxed text-zinc-600 sm:text-base">
                       {section.paragraphs.map((paragraph) => (
-                        <p key={paragraph.slice(0, 40)}>{paragraph}</p>
+                        <Fragment key={paragraph.text.slice(0, 40)}>
+                        {paragraph.subtitle ? (
+                          <h3 key={paragraph.subtitle} className="font-heading text-lg font-semibold text-zinc-900 sm:text-xl">
+                            {paragraph.subtitle}
+                          </h3>
+                        ) : null}
+                        <p key={paragraph.text.slice(0, 40)}>{paragraph.text}</p>
+                        </Fragment>
                       ))}
                     </div>
                   </article>

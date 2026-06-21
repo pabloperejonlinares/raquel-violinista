@@ -26,8 +26,8 @@ export default function Home() {
       <JsonLd data={getHomeStructuredData()} />
       <Hero />
       <EventTypesSection />
-      <AboutSection />
       <InstagramSection variant="home" />
+      <AboutSection />
     </SitePageLayout>
   );
 }
