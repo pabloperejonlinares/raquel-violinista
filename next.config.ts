@@ -27,10 +27,25 @@ const nextConfig: NextConfig = {
     ],
   },
   async headers() {
+    const videoCacheHeaders = [
+      {
+        key: "Cache-Control",
+        value: "public, max-age=31536000, immutable",
+      },
+    ];
+
     return [
       {
         source: "/(.*)",
         headers: securityHeaders,
+      },
+      {
+        source: "/raquel-reina-hotel.mp4",
+        headers: videoCacheHeaders,
+      },
+      {
+        source: "/raquel-reina-hotel.webm",
+        headers: videoCacheHeaders,
       },
     ];
   },

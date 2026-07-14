@@ -36,6 +36,11 @@ export type ServicePageConfig = {
   keywords: string[];
   heroImage: string;
   heroImageAlt: string;
+  heroVideo?: {
+    mp4: string;
+    webm?: string;
+    hasAudio?: boolean;
+  };
   h1: string;
   intro: string;
   sections: ServiceSection[];
@@ -156,6 +161,11 @@ export const servicePages = {
     heroImage: "/raquel-violinista-hoteles-restaurantes.webp",
     heroImageAlt:
       "Violinista amenizando un evento en un hotel o restaurante de Sevilla con música en vivo",
+    heroVideo: {
+      mp4: "/raquel-reina-hotel.mp4",
+      webm: "/raquel-reina-hotel.webm",
+      hasAudio: true,
+    },
     h1: "Música en vivo para hoteles y restaurantes en Sevilla",
     intro: `Hoteles y restaurantes de ${siteContact.location} acogen momentos que merecen una ambientación musical refinada. El violín en directo aporta distinción, calidez y emoción a galas, cenas especiales, cócteles y celebraciones privadas, creando una experiencia memorable para tus invitados.`,
     sections: [
