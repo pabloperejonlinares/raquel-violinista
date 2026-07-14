@@ -2,6 +2,7 @@ import { Card, Link } from "@heroui/react";
 import Image from "next/image";
 import NextLink from "next/link";
 
+import { HeroBackgroundVideo } from "@/components/HeroBackgroundVideo";
 import { JsonLd } from "@/components/JsonLd";
 import { InstagramSection } from "@/components/InstagramSection";
 import { MapPinIcon } from "@/components/SocialIcons";
@@ -82,19 +83,31 @@ export function EventServicePage({ page }: EventServicePageProps) {
       <JsonLd data={structuredData} />
 
       <section className="relative isolate min-h-[40vh] w-full overflow-hidden md:min-h-[48vh] lg:mx-auto lg:max-w-6xl lg:min-h-[52vh] lg:rounded-2xl">
-        <Image
-          src={page.heroImage}
-          alt={page.heroImageAlt}
-          fill
-          className="object-cover object-center"
-          priority
-          sizes="(max-width: 1024px) 100vw, 72rem"
-        />
+        {page.heroVideo ? (
+          <HeroBackgroundVideo
+            poster={page.heroImage}
+            alt={page.heroImageAlt}
+            mp4={page.heroVideo.mp4}
+            webm={page.heroVideo.webm}
+            hasAudio={page.heroVideo.hasAudio ?? true}
+          />
+        ) : (
+          <Image
+            src={page.heroImage}
+            alt={page.heroImageAlt}
+            fill
+            className="object-cover object-center"
+            priority
+            sizes="(max-width: 1024px) 100vw, 72rem"
+          />
+        )}
         <div
-          className="absolute inset-0 bg-linear-to-t from-zinc-950/90 via-zinc-950/45 to-zinc-950/20"
+          className={`absolute inset-0 bg-linear-to-t from-zinc-950/90 via-zinc-950/45 to-zinc-950/20${page.heroVideo ? " pointer-events-none" : ""}`}
           aria-hidden
         />
-        <div className="relative z-10 flex min-h-[40vh] flex-col justify-end p-5 pb-8 md:min-h-[48vh] md:p-10 lg:min-h-[52vh]">
+        <div
+          className={`relative z-10 flex min-h-[40vh] flex-col justify-end p-5 pb-8 md:min-h-[48vh] md:p-10 lg:min-h-[52vh]${page.heroVideo ? " pointer-events-none [&_a]:pointer-events-auto" : ""}`}
+        >
           <nav aria-label="Ruta de navegación" className="mb-4 text-sm text-white/75">
             <ol className="flex flex-wrap items-center gap-1.5">
               <li>

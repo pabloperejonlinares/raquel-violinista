@@ -34,9 +34,6 @@ export function SiteFooter() {
                 <SiteLogo variant="full" className="h-24 w-auto sm:h-28" />
               </div>
             </div>
-            <p className="mt-4 text-sm leading-relaxed text-zinc-400">
-              {siteBranding.slogan}
-            </p>
           </div>
           <div>
             <h2 className="font-heading text-lg font-semibold text-white">Servicios</h2>
