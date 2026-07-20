@@ -1,7 +1,8 @@
 export type InstagramSectionVariant =
   | "home"
   | "bodas"
-  | "hotelesRestaurantes"
+  | "hoteles"
+  | "restaurantes"
   | "otrosEventos"
   | "contacto";
 
@@ -21,10 +22,15 @@ export const instagramSectionContent = {
     description:
       "Hay vídeos y fotos de ceremonias, cócteles y banquetes en Sevilla. Así puedes ver y escuchar cómo suena el violín en una boda real.",
   },
-  hotelesRestaurantes: {
+  hoteles: {
     title: instagramSectionTitle,
     description:
-      "Comparto vídeos y fotos de galas, cenas especiales y eventos amenizados con violín en hoteles y restaurantes de la zona.",
+      "Comparto vídeos y fotos de galas, cócteles y eventos amenizados con violín en hoteles y salones de la zona.",
+  },
+  restaurantes: {
+    title: instagramSectionTitle,
+    description:
+      "Comparto vídeos y fotos de cenas especiales y celebraciones amenizadas con violín en restaurantes de la zona.",
   },
   otrosEventos: {
     title: instagramSectionTitle,

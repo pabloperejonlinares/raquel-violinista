@@ -47,18 +47,21 @@ const nextConfig: NextConfig = {
         source: "/raquel-reina-hotel.webm",
         headers: videoCacheHeaders,
       },
+      {
+        source: "/raquel-reina-boda.mp4",
+        headers: videoCacheHeaders,
+      },
+      {
+        source: "/raquel-reina-boda.webm",
+        headers: videoCacheHeaders,
+      },
     ];
   },
   async redirects() {
     return [
       {
-        source: "/hoteles",
-        destination: "/hoteles-restaurantes",
-        permanent: true,
-      },
-      {
-        source: "/restaurantes",
-        destination: "/hoteles-restaurantes",
+        source: "/hoteles-restaurantes",
+        destination: "/hoteles",
         permanent: true,
       },
       {
@@ -84,11 +87,6 @@ const nextConfig: NextConfig = {
       {
         source: "/IMG_4126.JPEG",
         destination: "/raquel-reina-contacto.webp",
-        permanent: true,
-      },
-      {
-        source: "/IMG_4117.JPEG",
-        destination: "/raquel-violinista-extra.webp",
         permanent: true,
       },
     ];
