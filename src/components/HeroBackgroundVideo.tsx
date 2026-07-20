@@ -82,7 +82,7 @@ export function HeroBackgroundVideo({
   const [isPlaying, setIsPlaying] = useState(true);
   const [videoVisible, setVideoVisible] = useState(false);
 
-  const mediaClassName = "object-cover object-left md:object-center";
+  const mediaClassName = imageClassName;
   const controlButtonClass =
     "flex h-10 w-10 items-center justify-center rounded-full bg-zinc-950/55 text-white backdrop-blur-sm transition-colors hover:bg-zinc-950/75 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-transparent";
 

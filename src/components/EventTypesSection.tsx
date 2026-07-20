@@ -11,7 +11,7 @@ export function EventTypesSection() {
         <h2 className="font-heading text-center text-2xl font-semibold text-zinc-900 sm:text-3xl">
           Tipos de eventos
         </h2>
-        <ul className="mt-10 grid list-none grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <ul className="mt-10 grid list-none grid-cols-1 gap-6 sm:grid-cols-2 xl:grid-cols-4">
           {eventTypes.map((item) => (
             <li key={item.id}>
               <NextLink
@@ -24,8 +24,8 @@ export function EventTypesSection() {
                       src={item.image}
                       alt={item.imageAlt}
                       fill
-                      className="object-cover transition-transform duration-300 group-hover:scale-[1.02]"
-                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                      className={`object-cover transition-transform duration-300 group-hover:scale-[1.02]${item.imageObjectClass ? ` ${item.imageObjectClass}` : ""}`}
+                      sizes="(max-width: 640px) 100vw, (max-width: 1280px) 50vw, 25vw"
                     />
                     <div className="absolute bottom-3 left-3 flex h-10 w-10 items-center justify-center rounded-full border border-white/90 bg-white shadow-md" aria-hidden>
                       <EventTypeIcon name={item.icon} />

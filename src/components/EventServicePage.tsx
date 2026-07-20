@@ -22,8 +22,9 @@ type EventServicePageProps = Readonly<{
 
 export function EventServicePage({ page }: EventServicePageProps) {
   const pageUrl = absoluteUrl(page.path);
+  const heroImageUrl = absoluteUrl(page.heroImage);
 
-  const structuredData = [
+  const structuredData: Record<string, unknown>[] = [
     {
       "@context": "https://schema.org",
       "@type": "BreadcrumbList",
@@ -48,7 +49,7 @@ export function EventServicePage({ page }: EventServicePageProps) {
       name: page.h1,
       description: page.metadataDescription,
       url: pageUrl,
-      image: absoluteUrl(page.heroImage),
+      image: heroImageUrl,
       provider: {
         "@type": "Person",
         name: siteBranding.title,
@@ -78,6 +79,38 @@ export function EventServicePage({ page }: EventServicePageProps) {
     },
   ];
 
+  if (page.heroVideo) {
+    structuredData.push({
+      "@context": "https://schema.org",
+      "@type": "VideoObject",
+      name: page.h1,
+      description: page.metadataDescription,
+      thumbnailUrl: heroImageUrl,
+      contentUrl: absoluteUrl(page.heroVideo.mp4),
+      embedUrl: pageUrl,
+      uploadDate: page.heroVideo.uploadDate ?? "2026-07-01",
+      inLanguage: "es-ES",
+      ...(page.heroVideo.webm
+        ? {
+            encoding: [
+              {
+                "@type": "MediaObject",
+                contentUrl: absoluteUrl(page.heroVideo.webm),
+                encodingFormat: "video/webm",
+              },
+              {
+                "@type": "MediaObject",
+                contentUrl: absoluteUrl(page.heroVideo.mp4),
+                encodingFormat: "video/mp4",
+              },
+            ],
+          }
+        : {
+            encodingFormat: "video/mp4",
+          }),
+    });
+  }
+
   return (
     <>
       <JsonLd data={structuredData} />
@@ -90,13 +123,17 @@ export function EventServicePage({ page }: EventServicePageProps) {
             mp4={page.heroVideo.mp4}
             webm={page.heroVideo.webm}
             hasAudio={page.heroVideo.hasAudio ?? true}
+            imageClassName={
+              page.heroVideo.objectClass ??
+              "object-cover object-left md:object-center"
+            }
           />
         ) : (
           <Image
             src={page.heroImage}
             alt={page.heroImageAlt}
             fill
-            className="object-cover object-center"
+            className={`object-cover ${page.heroImageObjectClass ?? "object-center"}`}
             priority
             sizes="(max-width: 1024px) 100vw, 72rem"
           />

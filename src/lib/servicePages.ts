@@ -36,10 +36,16 @@ export type ServicePageConfig = {
   keywords: string[];
   heroImage: string;
   heroImageAlt: string;
+  /** Tailwind object-position classes for the hero image crop */
+  heroImageObjectClass?: string;
   heroVideo?: {
     mp4: string;
     webm?: string;
     hasAudio?: boolean;
+    /** Tailwind object-position classes for the hero video crop */
+    objectClass?: string;
+    /** ISO date for VideoObject structured data */
+    uploadDate?: string;
   };
   h1: string;
   intro: string;
@@ -71,6 +77,13 @@ export const servicePages = {
     heroImage: "/raquel-violinista-bodas.webp",
     heroImageAlt:
       "Raquel Reina violinista amenizando una boda con música en vivo en Sevilla",
+    heroImageObjectClass: "object-[center_72%]",
+    heroVideo: {
+      mp4: "/raquel-reina-boda.mp4",
+      webm: "/raquel-reina-boda.webm",
+      hasAudio: true,
+      uploadDate: "2026-07-20",
+    },
     h1: "Música de violín para bodas en Sevilla",
     intro: `Tu boda merece una banda sonora tan especial como el día. Como violinista profesional ${locationPhrase}, acompaño cada instante con sensibilidad, elegancia y un repertorio pensado para emocionar a vosotros y a vuestros invitados.`,
     sections: [
@@ -140,54 +153,45 @@ export const servicePages = {
       },
     ],
     relatedLinks: [
-      { href: "/hoteles-restaurantes", label: "Hoteles y restaurantes" },
-      { href: "/otros-eventos", label: "Otros eventos" },
+      { href: "/hoteles", label: "Música para hoteles" },
+      { href: "/restaurantes", label: "Música para restaurantes" },
     ],
     instagramVariant: "bodas",
   },
-  hotelesRestaurantes: {
-    slug: "hoteles-restaurantes",
-    path: "/hoteles-restaurantes",
-    metadataTitle: "Violinista para hoteles y restaurantes en Sevilla",
-    metadataDescription: `${siteBranding.title}: violín en vivo para hoteles y restaurantes ${locationPhrase}. Galas, cenas especiales, bodas en hotel y eventos corporativos con repertorio elegante. ${instagramSeoSuffix}`,
+  hoteles: {
+    slug: "hoteles",
+    path: "/hoteles",
+    metadataTitle: "Violinista para hoteles en Sevilla",
+    metadataDescription: `${siteBranding.title}: violín en vivo para hoteles ${locationPhrase}. Galas, cócteles, bodas en hotel y eventos corporativos con repertorio elegante. ${instagramSeoSuffix}`,
     keywords: [
       "violinista hoteles sevilla",
-      "violinista restaurantes sevilla",
       "música hotel sevilla",
-      "música restaurante sevilla",
-      "amenización musical hoteles restaurantes",
+      "violinista gala hotel sevilla",
+      "música cóctel hotel sevilla",
+      "amenización musical hoteles",
       "música en vivo sevilla",
     ],
-    heroImage: "/raquel-violinista-hoteles-restaurantes.webp",
+    heroImage: "/raquel-violinista-hoeteles.webp",
     heroImageAlt:
-      "Violinista amenizando un evento en un hotel o restaurante de Sevilla con música en vivo",
+      "Raquel Reina violinista amenizando un evento en un hotel de Sevilla con música en vivo",
     heroVideo: {
       mp4: "/raquel-reina-hotel.mp4",
       webm: "/raquel-reina-hotel.webm",
       hasAudio: true,
+      objectClass: "object-cover object-[left_28%] md:object-[center_28%]",
+      uploadDate: "2026-07-14",
     },
-    h1: "Música en vivo para hoteles y restaurantes en Sevilla",
-    intro: `Hoteles y restaurantes de ${siteContact.location} acogen momentos que merecen una ambientación musical refinada. El violín en directo aporta distinción, calidez y emoción a galas, cenas especiales, cócteles y celebraciones privadas, creando una experiencia memorable para tus invitados.`,
+    h1: "Música en vivo para hoteles en Sevilla",
+    intro: `Los hoteles de ${siteContact.location} acogen momentos que merecen una ambientación musical refinada. El violín en directo aporta distinción, calidez y emoción a galas, cócteles, bodas en hotel y celebraciones privadas, creando una experiencia memorable para tus invitados.`,
     sections: [
       {
-        title: "Hoteles",
+        title: "Hoteles y salones de celebraciones",
         paragraphs: [
           {
             text: "Colaboro con hoteles y salones de celebraciones para amenizar bodas en hotel, aniversarios, cenas de gala, presentaciones de producto y encuentros empresariales. La música en vivo eleva la percepción del evento y transmite una imagen cuidada y sofisticada.",
           },
           {
             text: "Cada propuesta se adapta al espacio, al horario y al tipo de público: desde un cóctel en el vestíbulo hasta una cena en salón privado, siempre con un repertorio elegante y reconocible.",
-          },
-        ],
-      },
-      {
-        title: "Restaurantes",
-        paragraphs: [
-          {
-            text: "En restaurantes, el violín realza la velada sin competir con la conversación ni con la propuesta culinaria. Es ideal para cenas románticas, aniversarios, pedidas de mano, cumpleaños y celebraciones familiares en salones privados.",
-          },
-          {
-            text: "Trabajo contigo para diseñar actuaciones acordes al estilo del local, la duración de la cena y el tono de la celebración: desde melodías íntimas hasta temas alegres que todos reconocen.",
           },
         ],
       },
@@ -207,25 +211,25 @@ export const servicePages = {
         tone: "bg-violet-50",
       },
       {
-        title: "Restaurantes y cenas",
-        text: "Ambiente íntimo y elegante para cenas especiales y celebraciones privadas.",
+        title: "Adaptación al espacio",
+        text: "Repertorio y duración pensados para vestíbulos, terrazas y salones privados.",
         tone: "bg-rose-50",
       },
       {
         title: "Profesionalidad",
-        text: "Puntualidad, discreción y adaptación al protocolo de cada espacio.",
+        text: "Puntualidad, discreción y adaptación al protocolo de cada hotel.",
         tone: "bg-fuchsia-50",
       },
     ],
     faqs: [
       {
-        question: "¿Amenizas tanto hoteles como restaurantes en Sevilla?",
-        answer: `Sí. Actúo en hoteles, salones de celebraciones y restaurantes de ${siteContact.location} y alrededores, adaptando el repertorio a cada espacio y ocasión.`,
+        question: "¿Amenizas eventos en hoteles de Sevilla?",
+        answer: `Sí. Actúo en hoteles y salones de celebraciones de ${siteContact.location} y alrededores, adaptando el repertorio a cada espacio y ocasión.`,
       },
       {
-        question: "¿Qué tipo de eventos cubres en hoteles y restaurantes?",
+        question: "¿Qué tipo de eventos cubres en hoteles?",
         answer:
-          "Galas, cócteles, bodas en hotel, cenas de empresa, presentaciones, aniversarios, pedidas de mano y celebraciones privadas en salones y restaurantes.",
+          "Galas, cócteles, bodas en hotel, cenas de empresa, presentaciones, aniversarios y celebraciones privadas en salones.",
       },
       {
         question: "¿Actúas en Sevilla capital y provincia?",
@@ -234,9 +238,86 @@ export const servicePages = {
     ],
     relatedLinks: [
       { href: "/bodas", label: "Música para bodas" },
-      { href: "/otros-eventos", label: "Otros eventos" },
+      { href: "/restaurantes", label: "Música para restaurantes" },
     ],
-    instagramVariant: "hotelesRestaurantes",
+    instagramVariant: "hoteles",
+  },
+  restaurantes: {
+    slug: "restaurantes",
+    path: "/restaurantes",
+    metadataTitle: "Violinista para restaurantes en Sevilla",
+    metadataDescription: `${siteBranding.title}: violín en vivo para restaurantes ${locationPhrase}. Cenas especiales, aniversarios, pedidas de mano y celebraciones privadas con repertorio elegante. ${instagramSeoSuffix}`,
+    keywords: [
+      "violinista restaurantes sevilla",
+      "música restaurante sevilla",
+      "violinista cena especial sevilla",
+      "música aniversario restaurante",
+      "amenización musical restaurantes",
+      "música en vivo sevilla",
+    ],
+    heroImage: "/raquel-violinista-hoteles-restaurantes.webp",
+    heroImageAlt:
+      "Raquel Reina violinista amenizando una cena en un restaurante de Sevilla con música en vivo",
+    h1: "Música en vivo para restaurantes en Sevilla",
+    intro: `Los restaurantes de ${siteContact.location} acogen veladas que merecen una ambientación musical refinada. El violín en directo aporta distinción, calidez y emoción a cenas especiales y celebraciones privadas, sin competir con la conversación ni con la propuesta culinaria.`,
+    sections: [
+      {
+        title: "Restaurantes y salones privados",
+        paragraphs: [
+          {
+            text: "En restaurantes, el violín realza la velada sin invadir el ambiente. Es ideal para cenas románticas, aniversarios, pedidas de mano, cumpleaños y celebraciones familiares en salones privados.",
+          },
+          {
+            text: "Trabajo contigo para diseñar actuaciones acordes al estilo del local, la duración de la cena y el tono de la celebración: desde melodías íntimas hasta temas alegres que todos reconocen.",
+          },
+        ],
+      },
+      {
+        title: "Ambiente y repertorio",
+        paragraphs: [
+          {
+            text: "El violín combina a la perfección con entornos de calidad: aporta presencia y sutileza a la vez. El repertorio incluye clásicos, bandas sonoras y versiones de éxitos que invitan a sonreír, emocionarse y compartir recuerdos.",
+          },
+        ],
+      },
+    ],
+    features: [
+      {
+        title: "Cenas especiales",
+        text: "Ambiente íntimo y elegante para aniversarios, pedidas de mano y celebraciones privadas.",
+        tone: "bg-violet-50",
+      },
+      {
+        title: "A medida del local",
+        text: "Repertorio y volumen adaptados al estilo del restaurante y a la duración de la cena.",
+        tone: "bg-rose-50",
+      },
+      {
+        title: "Profesionalidad",
+        text: "Puntualidad, discreción y respeto al ritmo del servicio y del salón.",
+        tone: "bg-fuchsia-50",
+      },
+    ],
+    faqs: [
+      {
+        question: "¿Amenizas cenas y celebraciones en restaurantes de Sevilla?",
+        answer: `Sí. Actúo en restaurantes y salones privados de ${siteContact.location} y alrededores, adaptando el repertorio a cada espacio y ocasión.`,
+      },
+      {
+        question: "¿Qué tipo de eventos cubres en restaurantes?",
+        answer:
+          "Cenas románticas, aniversarios, pedidas de mano, cumpleaños y celebraciones familiares o privadas en salones de restaurante.",
+      },
+      {
+        question: "¿Actúas en Sevilla capital y provincia?",
+        answer: `Sí. Trabajo en ${siteContact.location} capital, provincia y alrededores. Consulta desplazamientos a otras zonas.`,
+      },
+    ],
+    relatedLinks: [
+      { href: "/bodas", label: "Música para bodas" },
+      { href: "/hoteles", label: "Música para hoteles" },
+    ],
+    instagramVariant: "restaurantes",
   },
   otrosEventos: {
     slug: "otros-eventos",
@@ -311,7 +392,7 @@ export const servicePages = {
     ],
     relatedLinks: [
       { href: "/bodas", label: "Música para bodas" },
-      { href: "/hoteles-restaurantes", label: "Hoteles y restaurantes" },
+      { href: "/hoteles", label: "Música para hoteles" },
     ],
     instagramVariant: "otrosEventos",
   },
