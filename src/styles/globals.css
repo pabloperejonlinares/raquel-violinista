@@ -29,6 +29,10 @@
 }
 
 @layer base {
+  p {
+    text-align: justify;
+  }
+
   .font-heading {
     font-family: var(--font-serif), "Georgia", "Times New Roman", serif;
   }
