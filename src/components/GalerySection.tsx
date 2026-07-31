@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
+import { InstagramSection } from "./InstagramSection";
 
 export default function GalerySection() {
   const videos = [
@@ -34,16 +35,20 @@ export default function GalerySection() {
         <h2 className="text-3xl font-serif text-center mb-10 text-neutral-800">
           Momentos Musicales en Vivo
         </h2>
+        <InstagramSection variant="home" />
+        <p className="mt-4 text-sm leading-relaxed mb-10 text-zinc-600 sm:text-base">
+          Si no quieres o no puedes acceder a mi instagram, aquí puedes ver algunos de los momentos musicales en vivo que he realizado.
+        </p>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {videos.map((url, index) => (
             <div 
               key={url} 
-              className="overflow-hidden rounded-2xl bg-black shadow-lg aspect-9/16 w-full max-w-[380px] mx-auto border border-neutral-200 relative"
+              className="overflow-hidden rounded-2xl bg-black shadow-lg aspect-9/16 w-full max-w-95 mx-auto border border-neutral-200 relative"
             >
               <iframe
                 title={`Video ${index + 1}`}
                 src={getEmbedUrl(url)}
-                className="absolute w-full h-[125%] left-0 top-0 mt-[-45px]"
+                className="absolute w-full h-[125%] left-0 top-0 -mt-11.25"
                 allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
               />
             </div>
