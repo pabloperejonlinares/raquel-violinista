@@ -88,7 +88,7 @@ export function EventServicePage({ page }: EventServicePageProps) {
       thumbnailUrl: heroImageUrl,
       contentUrl: absoluteUrl(page.heroVideo.mp4),
       embedUrl: pageUrl,
-      uploadDate: page.heroVideo.uploadDate ?? "2026-07-01",
+      uploadDate: page.heroVideo.uploadDate ?? "2026-07-01T12:00:00+02:00",
       inLanguage: "es-ES",
       ...(page.heroVideo.webm
         ? {
