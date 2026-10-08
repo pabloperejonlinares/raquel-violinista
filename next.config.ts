@@ -55,6 +55,14 @@ const nextConfig: NextConfig = {
         source: "/raquel-reina-boda.webm",
         headers: videoCacheHeaders,
       },
+      {
+        source: "/raquel-reina-restaurante.mp4",
+        headers: videoCacheHeaders,
+      },
+      {
+        source: "/raquel-reina-restaurante.webm",
+        headers: videoCacheHeaders,
+      },
     ];
   },
   async redirects() {
@@ -62,6 +70,16 @@ const nextConfig: NextConfig = {
       {
         source: "/hoteles-restaurantes",
         destination: "/hoteles",
+        permanent: true,
+      },
+      {
+        source: "/raquel-violinista-hoteles-restaurantes.webp",
+        destination: "/raquel-reina-restaurante.webp",
+        permanent: true,
+      },
+      {
+        source: "/raquel-reina-restaurante.jpeg",
+        destination: "/raquel-reina-restaurante.webp",
         permanent: true,
       },
       {
@@ -81,7 +99,7 @@ const nextConfig: NextConfig = {
       },
       {
         source: "/raquel-violinista-hoteles-restaurantes.jpg",
-        destination: "/raquel-violinista-hoteles-restaurantes.webp",
+        destination: "/raquel-reina-restaurante.webp",
         permanent: true,
       },
       {
