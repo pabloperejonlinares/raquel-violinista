@@ -36,7 +36,7 @@ export const eventTypes: EventTypeItem[] = [
     id: "3",
     title: "Restaurantes",
     description: "Cenas especiales y celebraciones en restaurantes.",
-    image: "/raquel-violinista-hoteles-restaurantes.webp",
+    image: "/raquel-reina-restaurante.webp",
     imageAlt:
       "Raquel Reina violinista amenizando una cena en un restaurante de Sevilla con música en vivo",
     href: "/restaurantes",

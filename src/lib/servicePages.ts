@@ -255,9 +255,16 @@ export const servicePages = {
       "amenización musical restaurantes",
       "música en vivo sevilla",
     ],
-    heroImage: "/raquel-violinista-hoteles-restaurantes.webp",
+    heroImage: "/raquel-reina-restaurante.webp",
     heroImageAlt:
       "Raquel Reina violinista amenizando una cena en un restaurante de Sevilla con música en vivo",
+    heroVideo: {
+      mp4: "/raquel-reina-restaurante.mp4",
+      webm: "/raquel-reina-restaurante.webm",
+      hasAudio: true,
+      objectClass: "object-cover object-right md:object-center",
+      uploadDate: "2026-10-08T12:00:00+02:00",
+    },
     h1: "Música en vivo para restaurantes en Sevilla",
     intro: `Los restaurantes de ${siteContact.location} acogen veladas que merecen una ambientación musical refinada. El violín en directo aporta distinción, calidez y emoción a cenas especiales y celebraciones privadas, sin competir con la conversación ni con la propuesta culinaria.`,
     sections: [
